@@ -1,6 +1,7 @@
-
 export default function Home() {
   return (
-    <main>abs</main>
+    <main className="w-full h-screen flex items-center justify-center">
+      abs
+    </main>
   );
 }

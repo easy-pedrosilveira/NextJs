@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components";
+import { Header, Footer } from "@/components";
 
 export const metadata: Metadata = {
   title: "Onde é a Boa?",
@@ -14,8 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <Header />
-      <body>{children}</body>
+      <body className="bg-white">
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
