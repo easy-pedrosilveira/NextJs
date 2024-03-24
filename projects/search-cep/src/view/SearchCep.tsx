@@ -1,8 +1,10 @@
 export function SearchCep() {
   return (
-    <div>
-      <input type="text" />
-      <button className="w-[216px] h-14 rounded-full bg-blue text-white">
+    <div className="flex-col items-center">
+      <div>
+        <input type="text" placeholder="Insira um Cep" />
+      </div>
+      <button className="w-40 h-14 rounded-full bg-blue text-white">
         Consultar
       </button>
     </div>
