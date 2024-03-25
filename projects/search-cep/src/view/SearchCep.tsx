@@ -1,6 +1,6 @@
 export function SearchCep() {
   return (
-    <div className="flex-col items-center">
+    <div className="w-96 h-96 flex flex-col items-center bg-white1">
       <div>
         <input type="text" placeholder="Insira um Cep" />
       </div>
