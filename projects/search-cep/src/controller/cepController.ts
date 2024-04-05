@@ -1,25 +1,15 @@
-import ICepData from "@/interfaces/CepData";
+import ICepData from "@/model/CepModel";
+import Localization from "@/services/IClientHttp";
 
-export default abstract class Localization {
-    //get
-
+export default class LocalizationController {
+  async searchCep(cep: string): Promise<ICepData | null> {
+    try {
+      // Fazer a requisição à API para obter os dados do CEP
+      const responseData = await Localization.fetchCepData(cep);
+      return responseData;
+    } catch (error) {
+      console.error("Erro ao buscar CEP:", error);
+      return null;
+    }
+  }
 }
-
-// import { BASE_URL } from "@/api";
-// import { CepData } from "@/types/CepData";
-// import axios from "axios";
-
-// export class CepController {
-
-// }
-
-// export const getCepData = async (cep: string): Promise<CepData> => {
-//   try {
-//     const response = await axios.get(`${BASE_URL}/${cep}/json/`);
-//     if (response.status === 200) return response.data;
-//     else throw new Error("Erro ao buscar CEP");
-//   } catch (error) {
-//     alert(`Error ao Buscar CEP:${error}`);
-//     throw new Error("Erro ao buscar CEP");
-//   }
-// };
