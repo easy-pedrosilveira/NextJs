@@ -1,9 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { GetCep } from "@/controller";
+import ICepData from "@/model/CepModel";
+import { ClientHttpAxios } from "@/services";
+import { InputMask } from "@react-input/mask";
+import { useState } from "react";
 
 interface SearchCepProps {
-  getCep: (value: string) => void;
+  getCep: (value: ICepData) => void;
 }
 
 export function SearchCep({ getCep }: SearchCepProps) {
@@ -13,15 +17,21 @@ export function SearchCep({ getCep }: SearchCepProps) {
     setCep(e.target.value);
   };
 
-  useEffect(() => {
-    getCep(cep);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cep]);
+  async function handleCep() {
+    const client = new ClientHttpAxios();
+    const controller = new GetCep(client);
+    const data = await controller.getLocalization(cep);
+    getCep(data);
+  }
 
   return (
     <div>
-      <input type="text" onChange={handleCepChange} />
-      <button onClick={getCep}>Buscar</button>
+      <InputMask
+        mask="99999-999"
+        placeholder="99999-999"
+        onChange={handleCepChange}
+      />
+      <button onClick={handleCep}>Buscar</button>
     </div>
   );
 }

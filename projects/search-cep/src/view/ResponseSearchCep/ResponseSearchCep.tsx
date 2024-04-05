@@ -1,18 +1,22 @@
-import React from "react";
+import ICepData from "@/model/CepModel";
 
-export function ResponseSearchCep({ cepData }: any) {
+interface ResponseSearchCepProps {
+  responseCepData: ICepData;
+}
+
+export function ResponseSearchCep({ responseCepData }: ResponseSearchCepProps) {
   return (
     <div>
-      <p>CEP: {cepData?.cep}</p>
-      <p>Logradouro: {cepData?.logradouro}</p>
-      <p>Complemento: {cepData?.complemento}</p>
-      <p>Bairro: {cepData?.bairro}</p>
-      <p>Localidade: {cepData?.localidade}</p>
-      <p>UF: {cepData?.uf}</p>
-      <p>IBGE: {cepData?.ibge}</p>
-      <p>GIA: {cepData?.gia}</p>
-      <p>DDD: {cepData?.ddd}</p>
-      <p>SIAFI: {cepData?.siafi}</p>
+      <p>CEP: {responseCepData?.cep}</p>
+      <p>Logradouro: {responseCepData?.logradouro}</p>
+      <p>Complemento: {responseCepData?.complemento}</p>
+      <p>Bairro: {responseCepData?.bairro}</p>
+      <p>Localidade: {responseCepData?.localidade}</p>
+      <p>UF: {responseCepData?.uf}</p>
+      <p>IBGE: {responseCepData?.ibge}</p>
+      <p>GIA: {responseCepData?.gia}</p>
+      <p>DDD: {responseCepData?.ddd}</p>
+      <p>SIAFI: {responseCepData?.siafi}</p>
     </div>
   );
 }
