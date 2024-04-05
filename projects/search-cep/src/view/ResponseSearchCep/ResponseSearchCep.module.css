@@ -3,7 +3,6 @@
     max-width: auto;
     display: flex;
     flex-direction: column;
-    gap: 8px;
 }
 
 .intro{
@@ -13,7 +12,7 @@
 
 .columns, .columnsDark{
     width: 100%;
-    height: 40px;
+    height: 50px;
     font-size: 16px;
     display: flex;
     align-items: center;
@@ -24,7 +23,8 @@
 }
 
 .columnsDark{
-    background: #2a2d344d;
+    background: #312F4827;
+    border-radius: 5px;
 }
 
 .data{

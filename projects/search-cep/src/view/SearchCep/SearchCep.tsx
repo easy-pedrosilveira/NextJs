@@ -1,9 +1,8 @@
+import styles from "./SearchCep.module.css";
 import { GetCep } from "@/controller";
 import ICepData from "@/model/CepModel";
 import { ClientHttpAxios } from "@/services";
-import { InputMask } from "@react-input/mask";
 import { useState } from "react";
-import styles from "./SearchCep.module.css";
 import {
   CheckCircleIcon,
   ExclamationCircleIcon,

@@ -13,9 +13,11 @@ export default function Home() {
 
   return (
     <main className="w-full h-[80vh] flex items-center justify-center">
-      <div className="w-[85%] h-auto flex items-center justify-between">
+      <div className="w-[85%] h-auto flex justify-between">
         <SearchCep getCep={handleGetCep} />
-        {<ResponseSearchCep responseCepData={responseCep} />}
+        <Suspense fallback={<>Carregando...</>}>
+          { <ResponseSearchCep responseCepData={responseCep} />}
+        </Suspense>
       </div>
     </main>
   );
