@@ -4,7 +4,7 @@ import { BASE_URL } from "@/api";
 import ICepData from "@/model/CepModel";
 
 export interface IGetLocalization {
-  getLocalization(cep: string): Promise<ICepData>;
+  getLocalization(cep: string): any;
 }
 
 export class GetCep implements IGetLocalization {
