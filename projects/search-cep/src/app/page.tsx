@@ -2,7 +2,7 @@
 
 import ICepData from "@/model/CepModel";
 import { SearchCep, ResponseSearchCep } from "@/view";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 
 export default function Home() {
   const [responseCep, setResponseCep] = useState<ICepData>();
@@ -13,9 +13,9 @@ export default function Home() {
 
   return (
     <main className="w-full h-[80vh] flex items-center justify-center">
-      <div className="w-[85%] h-auto flex items-center justify-between bg-blue/45">
+      <div className="w-[85%] h-auto flex items-center justify-between">
         <SearchCep getCep={handleGetCep} />
-        {responseCep && <ResponseSearchCep responseCepData={responseCep} />}
+        {<ResponseSearchCep responseCepData={responseCep} />}
       </div>
     </main>
   );
