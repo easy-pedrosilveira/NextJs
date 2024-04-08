@@ -13,8 +13,8 @@
 }
 
 .titleInput {
-    color: #312F48;
-    font-size: 14px;
+    color: #0160F7;
+    font-size: 16px;
     font-style: normal;
     font-weight: 600;
 }
@@ -29,7 +29,7 @@
     border-radius: 12px;
     border: none;
     outline: none;
-    background: var(--primary-colors-white, #312F48);
+    background: var(--primary-colors-white, #0160F7);
     box-shadow: 0px 0px 0px 3px #4C5B6B20;
     color: #fff;
     font-family: "Inter", sans-serif;
@@ -47,7 +47,7 @@
 .btn{
     width: 100%;
     height: 48px;
-    background: #312F48;
+    background: #0160F7;
     border-radius: 12px;
     color: #fff;
 }
