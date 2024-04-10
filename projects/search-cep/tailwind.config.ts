@@ -10,10 +10,12 @@ const config: Config = {
     extend: {},
     colors: {
       black: "#2A2D34",
-      blue:"#0160F7",
-      white:"#f1f1f1",
-      white1:"#F1F0F5",
-      gray1: "#4C5B6B"
+      blue: "#0160F7",
+      yellow: "#EEE82C",
+      green: "#53A548",
+      white: "#f1f1f1",
+      white1: "#F1F0F5",
+      gray1: "#4C5B6B",
     },
   },
   plugins: [],
