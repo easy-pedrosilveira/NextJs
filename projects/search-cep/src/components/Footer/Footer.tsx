@@ -72,7 +72,7 @@ export function Footer() {
         </div>
         <div className="mt-8 md:order-1 md:mt-0">
           <p className="text-center text-xs leading-5 text-gray-500">
-            &copy; 2024 Onde é a Boa, Inc. Todos os direitos estão reservados.
+            &copy; 2024 Localiza aí, Inc. Todos os direitos estão reservados.
           </p>
         </div>
       </div>

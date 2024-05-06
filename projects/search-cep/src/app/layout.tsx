@@ -3,7 +3,7 @@ import "./globals.css";
 import { Header, Footer } from "@/components";
 
 export const metadata: Metadata = {
-  title: "Onde é a Boa?",
+  title: "Localiza aí?",
   description: "o icone será uma spyglass(luneta)",
 };
 
@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className="bg-white1">
+      <body className="bg-white">
         <Header />
         {children}
         <Footer />
