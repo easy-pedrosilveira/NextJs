@@ -7,7 +7,7 @@ interface InfoParams {
 }
 
 export default function Info({ params }: InfoParams) {
-  if (parseInt(params.productId) > 100) notFound();
+  if (parseInt(params.productId) > 300) notFound();
 
   return (
     <div>
